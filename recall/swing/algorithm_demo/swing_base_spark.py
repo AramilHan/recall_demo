@@ -77,11 +77,6 @@ class SwingBaseSpark(object):
         item_sim_dict = item_sim_rdd.collect()
         print(item_sim_dict)
         json.dump(item_sim_dict, open(self.item_sim_save_path, "w"))
-        i = 0
-        for info in item_sim_rdd.collect():
-            if i < 2:
-                print(info)
-                i += 1
 
     def run(self):
         self.load_data()
